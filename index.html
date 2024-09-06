@@ -1,62 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+    <!-- Define o conjunto de caracteres como UTF-8, garantindo suporte a caracteres especiais -->
     <meta charset="UTF-8">
+    
+    <!-- Define a viewport para melhorar a responsividade em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para o arquivo de estilos CSS externo -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Título da página, exibido na aba do navegador -->
     <title>Brain</title>
 </head>
+
 <body>
+    <!-- Container para exibir alertas. Inicialmente, o alerta está oculto (display: none) -->
     <div class="alert-container">
         <div id="alerta" class="alerta" style="display: none;"></div>
     </div>
+    
+    <!-- Conteúdo principal da página -->
     <main>
+        <!-- Container que será movido dependendo da interação do usuário -->
         <div class="container" id="movable-container">
             <section>
+                <!-- Título principal da seção -->
                 <h1>Machine Learning</h1>
+                
+                <!-- Subtítulo da seção -->
                 <p class="sub_tit">Guia de modelos</p>
+                
+                <!-- Campo de pesquisa para buscar modelos de Machine Learning -->
                 <div>
                     <input id="campo-pesquisa" type="text" placeholder="Pesquisar um modelo">
                     <button class="search" onclick="pesquisarModelo()">Pesquisar</button>
                 </div>
+                
+                <!-- Botões de categorias de modelos de Machine Learning -->
                 <div>
-                    <button class="Cla" onclick="Cla()">Classificação <span class="tooltip-text1">Identificando a qual categoria um objeto pertence</span></button>
-                    <button class="Reg" onclick="Reg()">Regressão<span class="tooltip-text2">Prever um atributo de valor contínuo associado a um objeto</span></button>
-                    <button class="Clu" onclick="Clu()">Clustering<span class="tooltip-text3">Agrupamento automático de objetos semelhantes em conjuntos</span></button>
-                    <button class="Red" onclick="Red()">Redução de Dimensão<span class="tooltip-text4">Reduzindo o número de variáveis ​​aleatórias a considerar</span></button>
+                    <!-- Botão para a categoria de Classificação, com uma tooltip explicativa -->
+                    <button class="Cla" onclick="Cla()">Classificação
+                        <span class="tooltip-text1">Identificando a qual categoria um objeto pertence</span>
+                    </button>
+                    
+                    <!-- Botão para a categoria de Regressão, com uma tooltip explicativa -->
+                    <button class="Reg" onclick="Reg()">Regressão
+                        <span class="tooltip-text2">Prever um atributo de valor contínuo associado a um objeto</span>
+                    </button>
+                    
+                    <!-- Botão para a categoria de Clustering, com uma tooltip explicativa -->
+                    <button class="Clu" onclick="Clu()">Clustering
+                        <span class="tooltip-text3">Agrupamento automático de objetos semelhantes em conjuntos</span>
+                    </button>
+                    
+                    <!-- Botão para a categoria de Redução de Dimensão, com uma tooltip explicativa -->
+                    <button class="Red" onclick="Red()">Redução de Dimensão
+                        <span class="tooltip-text4">Reduzindo o número de variáveis ​​aleatórias a considerar</span>
+                    </button>
                 </div>
             </section>
         </div>
+        
+        <!-- Seção para exibir os resultados da pesquisa ou da seleção dos modelos -->
         <div>
             <section class="resultados" id="resultados"></section>
         </div>
     </main>
 
-
+    <!-- Imagem de fundo da página, com baixa opacidade para não interferir no conteúdo -->
     <div class="image">
         <img src="brain.png" alt="Imagem da Imersão Dev" width="750" height="750">
     </div>
 
+    <!-- Botão de ajuda que expande ao ser clicado, exibindo um assistente interativo -->
     <button class="btn" onclick="toggleHelp()">
         <span class="text">Precisa de ajuda para escolher o modelo</span>
         <span class="interrogacao">?</span>
     </button>
 
+    <!-- Container que exibe o conteúdo do assistente de ajuda (oculto inicialmente) -->
     <div class="help-container"></div>
-        <div class="chat-container" id="chat-container" style="display: none;">
-            <div id="chat-content">
-                <!-- Aqui irão aparecer as perguntas e respostas -->
-            </div>
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div id="chat-content">
+            <!-- As perguntas e respostas do assistente de ajuda serão inseridas aqui dinamicamente -->
         </div>
     </div>
-
+    
+    <!-- Rodapé da página com informações de direitos autorais e contato -->
     <footer>
         <p>2024 - Projeto Alura+Google Gemini - Todos os direitos reservados</p>
         <p>Contato: rafaelsouzadsp2002@gmail.com</p>
     </footer>
 
-
+    <!-- Inclui os arquivos JavaScript que controlam a interação da página -->
     <script src="dados.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
