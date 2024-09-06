@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Brain</title>
+</head>
+<body>
+    <div class="alert-container">
+        <div id="alerta" class="alerta" style="display: none;"></div>
+    </div>
+    <main>
+        <div class="container" id="movable-container">
+            <section>
+                <h1>Machine Learning</h1>
+                <p class="sub_tit">Guia de modelos</p>
+                <div>
+                    <input id="campo-pesquisa" type="text" placeholder="Pesquisar um modelo">
+                    <button class="search" onclick="pesquisarModelo()">Pesquisar</button>
+                </div>
+                <div>
+                    <button class="Cla" onclick="Cla()">Classificação <span class="tooltip-text1">Identificando a qual categoria um objeto pertence</span></button>
+                    <button class="Reg" onclick="Reg()">Regressão<span class="tooltip-text2">Prever um atributo de valor contínuo associado a um objeto</span></button>
+                    <button class="Clu" onclick="Clu()">Clustering<span class="tooltip-text3">Agrupamento automático de objetos semelhantes em conjuntos</span></button>
+                    <button class="Red" onclick="Red()">Redução de Dimensão<span class="tooltip-text4">Reduzindo o número de variáveis ​​aleatórias a considerar</span></button>
+                </div>
+            </section>
+        </div>
+        <div>
+            <section class="resultados" id="resultados"></section>
+        </div>
+    </main>
+
+
+    <div class="image">
+        <img src="brain.png" alt="Imagem da Imersão Dev" width="750" height="750">
+    </div>
+
+    <button class="btn" onclick="toggleHelp()">
+        <span class="text">Precisa de ajuda para escolher o modelo</span>
+        <span class="interrogacao">?</span>
+    </button>
+
+    <div class="help-container"></div>
+        <div class="chat-container" id="chat-container" style="display: none;">
+            <div id="chat-content">
+                <!-- Aqui irão aparecer as perguntas e respostas -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 - Projeto Alura+Google Gemini - Todos os direitos reservados</p>
+        <p>Contato: rafaelsouzadsp2002@gmail.com</p>
+    </footer>
+
+
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
