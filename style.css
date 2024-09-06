@@ -1,414 +1,507 @@
-/* Importa a fonte 'Chakra Petch' do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/* Estiliza o corpo da página */
+
 body {
-    font-family: "Chakra Petch", sans-serif; /* Define a fonte da página */
-    background-color: #DDDDDD; /* Cor de fundo */
-    display: flex;
-    flex-direction: column; /* Layout em coluna */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    height: 100vh; /* Altura da página como 100% da viewport */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimentos padrão */
+    font-family: "Chakra Petch", sans-serif; 
+    background-color: #DDDDDD; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
 }
 
-/* Estilo para o título principal (h1) */
 h1 {
-    font-size: 2.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    letter-spacing: 0.2rem; /* Espaçamento entre letras */
-    margin-bottom: 0; /* Remove a margem inferior */
+    font-size: 2.5rem;;
+    color: #222831;
+    text-align: center;
+    letter-spacing: 0.2rem; 
+    margin-bottom: 0;
 }
 
-/* Estilo para o subtítulo */
-.sub_tit {
-    margin-top: 0; /* Remove a margem superior */
-    font-size: 1.5rem; /* Tamanho da fonte */
-    color: #222831; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    letter-spacing: 0.5rem; /* Aumenta o espaçamento entre letras */
+.sub_tit{
+    margin-top: 0;
+    font-size: 1.5rem; 
+    color: #222831; 
+    text-align: center; 
+    letter-spacing: 0.5rem;
 }
 
-/* Estilo da seção principal */
+
+
 section {
     display: flex;
-    flex-direction: column; /* Layout em coluna */
-    align-items: center; /* Centraliza o conteúdo */
-    margin-bottom: 3rem; /* Margem inferior */
+    flex-direction: column; 
+    align-items: center;
+    margin-bottom: 3rem;
 }
 
-/* Estilo do campo de entrada de texto */
 section input {
-    width: 30rem; /* Define a largura */
-    border: none; /* Remove a borda */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 1.5rem; /* Bordas arredondadas */
-    margin-bottom: 1rem; /* Margem inferior */
-    color: #45474B; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    box-sizing: border-box; /* Inclui o padding na largura total */
+    width: 30rem; 
+    border: none; 
+    padding: 1rem;
+    border-radius: 1.5rem; 
+    margin-bottom: 1rem; 
+    color: #45474B; 
+    font-size: 1rem; 
+    box-sizing: border-box; 
 }
 
-/* Estilo do botão de pesquisa quando o mouse passa sobre ele */
 section .search:hover {
-    background-color: #425467; /* Muda a cor de fundo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    background-color: #425467; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilo padrão do botão de pesquisa */
+
 section .search {
-    padding: 0.8rem 1.2rem; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 1.5rem; /* Bordas arredondadas */
-    background-color: #30475E; /* Cor de fundo */
-    color: #F5F7F8; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de clique */
-    margin-bottom: 1rem; /* Margem inferior */
-    z-index: 1; /* Controla a sobreposição de elementos */
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 1.5rem;
+    background-color: #30475E; 
+    color: #F5F7F8; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    margin-bottom: 1rem;
+    z-index: 1;
 }
 
-/* Estilo dos botões de categorias (Classificação, Regressão, etc.) quando o mouse passa sobre eles */
 section .Cla:hover,
 section .Clu:hover,
 section .Red:hover,
 section .Reg:hover {
-    background-color: #26384a; /* Muda a cor de fundo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    background-color: #26384a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo do botão de Classificação */
+
 section .Cla {
-    position: relative; /* Necessário para posicionar a tooltip */
-    margin-top: 1rem; /* Margem superior */
-    padding: 0.8rem 1.2rem; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 0.8rem; /* Bordas arredondadas */
-    background-color: #1b2b3b; /* Cor de fundo */
-    color: #F5F7F8; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de clique */
-    margin-right: 0.5rem; /* Margem direita */
+    position: relative;
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 0.8rem; 
+    background-color: #1b2b3b; 
+    color: #F5F7F8;
+    font-size: 1rem; 
+    cursor: pointer; 
+    margin-right: 0.5rem;
 }
 
-/* Estilo da tooltip (texto explicativo) do botão de Classificação */
 .tooltip-text1 {
-    visibility: hidden; /* Inicialmente invisível */
-    width: 290px; /* Largura da tooltip */
-    background-color: #ababab; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    border-radius: 0.5rem; /* Bordas arredondadas */
-    padding: 0.5rem; /* Espaçamento interno */
-    position: absolute; /* Posição absoluta */
-    z-index: 1; /* Garante que fique acima dos outros elementos */
-    top: 125%; /* Posiciona abaixo do botão */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição para ficar perfeitamente centralizada */
-    opacity: 0; /* Invisível por padrão */
-    transition: opacity 0.5s; /* Animação suave */
-    white-space: nowrap; /* Impede a quebra de linha */
-    font-size: small; /* Tamanho da fonte */
+    visibility: hidden;
+    width: 290px;
+    background-color: #ababab;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Alterado para aparecer abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Evitar quebra de linha */
+    font-size: small;
 }
 
-/* Estilo para exibir a tooltip ao passar o mouse */
 .Cla:hover .tooltip-text1 {
-    visibility: visible; /* Torna visível */
-    opacity: 1; /* Animação de aparecimento */
-    transition-delay: 0.5s; /* Pequeno atraso na transição */
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
 }
 
-/* Estilo dos botões de outras categorias segue a mesma lógica */
+section .Reg {
+    position: relative;
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 0.8rem; 
+    background-color: #1b2b3b;
+    color: #F5F7F8;
+    font-size: 1rem; 
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
 
-/* Estilo do contêiner de resultados */
-.resultados {
-    position: absolute; /* Posição absoluta */
-    top: 1%; /* Posição a partir do topo */
-    right: 10%; /* Posição a partir da direita */
-    width: 30rem; /* Largura do contêiner */
-    height: 80vh; /* Altura do contêiner */
-    overflow-y: auto; /* Habilita rolagem vertical */
-    margin-top: 1rem; /* Margem superior */
+.tooltip-text2 {
+    visibility: hidden;
+    width: 360px;
+    background-color: #ababab;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Alterado para aparecer abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Evitar quebra de linha */
+    font-size: small;
+}
+
+.Reg:hover .tooltip-text2 {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+section .Clu {
+    position: relative;
+    padding: 0.8rem 1rem; 
+    border: none; 
+    border-radius: 0.8rem; 
+    background-color: #1b2b3b; 
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.tooltip-text3 {
+    visibility: hidden;
+    width: 380px;
+    background-color: #ababab;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Alterado para aparecer abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Evitar quebra de linha */
+    font-size: small;
+}
+
+.Clu:hover .tooltip-text3 {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+section .Red {
+    position: relative;
+    padding: 0.8rem 1.2rem; 
+    border: none; 
+    border-radius: 0.8rem; 
+    background-color: #1b2b3b; 
+    color: #F5F7F8;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.tooltip-text4 {
+    visibility: hidden;
+    width: 340px;
+    background-color: #ababab;
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    top: 125%; /* Alterado para aparecer abaixo do botão */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap; /* Evitar quebra de linha */
+    font-size: small;
+}
+
+.Red:hover .tooltip-text4 {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+
+
+.resultados{
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    width: 30rem; /* Largura máxima da caixa de resultados */
+    height: 80vh; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
-    border-radius: 0.6rem; /* Bordas arredondadas */
+    border-radius: 0.6rem; /* Borda arredondada */
 }
 
-/* Estilo de cada item de resultado */
 .item-resultado {
-    background: #FFFFFF; /* Cor de fundo */
-    border-radius: 0.6rem; /* Bordas arredondadas */
+    background: #FFFFFF; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Margem inferior */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-/* Estilo dos títulos dentro dos itens de resultado */
+/* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
     font-size: 1.5rem; /* Tamanho da fonte */
     color: #222831; /* Cor do texto */
 }
 
-/* Estilo dos links dentro dos itens de resultado */
+/* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #30475E; /* Cor dos links */
+    color: #30475E; /* Cor do texto dos links */
 }
 
-/* Estilo dos links ao passar o mouse */
+/* Estiliza os links quando são passados o mouse sobre */
 .item-resultado a:hover {
-    text-decoration: underline; /* Adiciona sublinhado */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Estilo da descrição dentro dos itens de resultado */
+/* Estiliza a descrição meta dentro dos itens de resultado */
 .descricao-meta {
     color: #45474B; /* Cor do texto */
-    margin: 0.5rem 0; /* Margem vertical */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
 }
 
-/* Estilo do contêiner principal */
+
 .container {
     display: flex;
-    flex-direction: column; /* Layout em coluna */
-    align-items: center; /* Centraliza o conteúdo */
-    transition: transform 0.5s ease-in-out; /* Transição suave ao mover */
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
-/* Estilo quando o contêiner é movido */
 .container.moved {
-    transform: translateX(-50%); /* Move o contêiner 50% para a esquerda */
+    transform: translateX(-50%);
 }
 
-/* Estilo da barra de rolagem personalizada */
+.resultados {
+    width: 30%;
+    display: none; /* Inicialmente escondida */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.resultados.visible {
+    display: block;
+    opacity: 1;
+}
+
 #resultados::-webkit-scrollbar {
-    width: 12px; /* Largura da barra de rolagem */
+    width: 12px;
 }
 
 #resultados::-webkit-scrollbar-track {
-    background: #f0f0f0; /* Cor da trilha da barra de rolagem */
+    background: #f0f0f0;
 }
 
 #resultados::-webkit-scrollbar-thumb {
-    background-color: #ababab; /* Cor da "pegada" da barra de rolagem */
-    border-radius: 10px; /* Bordas arredondadas */
-    border: 2px solid #f0f0f0; /* Borda ao redor da "pegada" */
+    background-color: #ababab; /* Cor principal */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0; /* Adiciona borda externa */
 }
 
 #resultados::-webkit-scrollbar-thumb:hover {
-    background-color: #8a8a8a; /* Cor ao passar o mouse sobre a "pegada" */
+    background-color: #8a8a8a; /* Cor ao passar o mouse */
 }
 
-/* Estilo do botão expandir */
-.expandir {
-    position: absolute; /* Posição absoluta */
-    right: 16%; /* Posição à direita */
-    background-color: #fff; /* Cor de fundo */
-    border: none; /* Remove a borda */
-    font-size: large; /* Tamanho da fonte */
+.expandir{
+    position: absolute;
+    right: 16%;
+    background-color: #fff;
+    border: none;
+    font-size: large;
 }
 
-/* Estilo ao passar o mouse no botão expandir */
 .expandir:hover {
-    background-color: #c7c7c7; /* Cor de fundo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra */
+    background-color: #c7c7c7; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilo do conteúdo extra dentro dos itens de resultado */
 .extra-content {
-    margin-top: 10px; /* Margem superior */
-    padding: 10px; /* Espaçamento interno */
-    background-color: #f5f5f5; /* Cor de fundo */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo dos tópicos (vantagens, desvantagens, etc.) */
-.topics {
-    font-size: 1rem; /* Tamanho da fonte */
-    color: #30475E !important; /* Cor do texto */
+.topics{
+    font-size: 1rem; 
+    color: #30475E!important;
 }
 
-/* Estilo do botão quando selecionado */
 button.selected {
     background-color: #ffffff !important; /* Cor de fundo do botão selecionado */
     color: #30475E; /* Cor do texto do botão selecionado */
 }
 
-/* Estilo do botão de fechar pesquisa */
+
+
 .fechar {
-    position: absolute; /* Posição absoluta */
-    right: 3.2%; /* Posição à direita */
+    position: absolute;
+    right: 3.2%;
     align-items: center;
-    margin-bottom: 0px; /* Remove margem inferior */
-    padding: 0.2rem 0.6rem; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 0.6rem; /* Bordas arredondadas */
-    background-color: #30475E; /* Cor de fundo */
-    color: #F5F7F8; /* Cor do texto */
-    font-size: 1.0rem; /* Tamanho da fonte */
-    cursor: pointer; /* Cursor de clique */
-    margin-right: 0px; /* Remove margem direita */
-    transition: background-color 0.3s ease; /* Transição suave */
+    margin-bottom: 0px;
+    padding: 0.2rem 0.6rem; 
+    border: none; 
+    border-radius: 0.6rem; 
+    background-color: #30475E; 
+    color: #F5F7F8;
+    font-size: 1.0rem; 
+    cursor: pointer; 
+    margin-right: 0px;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilo ao passar o mouse no botão de fechar */
 .fechar:hover {
-    background-color: #4d5b69; /* Muda a cor de fundo */
+    background-color: #4d5b69;
 }
 
-/* Estilo do contêiner de alerta */
 .alert-container {
-    position: relative; /* Posição relativa */
-    width: 100%; /* Largura total */
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
+    justify-content: center;
 }
 
-/* Estilo do alerta */
 .alerta {
-    background-color: #f8d7da; /* Cor de fundo */
-    color: #721c24; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    border: 1px solid #f5c6cb; /* Borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin-bottom: 10px; /* Margem inferior */
-    text-align: center; /* Centraliza o texto */
-    width: 80%; /* Largura do alerta */
-    position: absolute; /* Posição absoluta */
-    top: -50px; /* Posição acima */
-    max-width: 400px; /* Largura máxima */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 80%; /* Ajuste conforme necessário */
+    position: absolute;
+    top: -50px; /* Ajuste conforme necessário para posicionar acima do título */
+    max-width: 400px; /* Limita a largura máxima para garantir boa aparência em telas maiores */
+    z-index: 1000;
 }
 
-/* Estilo do contêiner de ajuda */
 .help-container {
-    position: fixed; /* Posição fixa */
-    bottom: 20px; /* Posição a partir da parte inferior */
-    right: 20px; /* Posição a partir da direita */
-    z-index: 1000; /* Garante que fique acima de outros elementos */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
-/* Estilo do botão de ajuda */
 .help-button {
-    background-color: #30475E; /* Cor de fundo */
-    color: #F5F7F8; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
+    background-color: #30475E;
+    color: #F5F7F8;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Estilo do contêiner de chat */
 .chat-container {
-    background-color: #F5F7F8; /* Cor de fundo */
-    border: 1px solid #ccc; /* Borda */
-    border-radius: 1rem; /* Bordas arredondadas */
-    width: 370px; /* Largura do contêiner */
-    max-height: 70vh; /* Altura máxima */
-    overflow-y: auto; /* Habilita rolagem vertical */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-    position: absolute; /* Posição absoluta */
-    bottom: 20vh; /* Posição a partir do fundo */
-    right: 1%; /* Posição a partir da direita */
+    background-color: #F5F7F8;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    width: 370px;
+    max-height: 70vh; /* Limite máximo de altura */
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 20vh; /* Ajuste a posição conforme necessário */
+    right: 1%;
     display: flex;
-    flex-direction: column; /* Layout em coluna */
+    flex-direction: column;
 }
 
-/* Estilo do conteúdo do chat */
 #chat-content {
-    padding: 10px; /* Espaçamento interno */
-    overflow-y: auto; /* Habilita rolagem vertical */
+    padding: 10px;
+    overflow-y: auto;
 }
 
-/* Estilo dos botões no chat */
 .chat-button {
-    background-color: #30475E; /* Cor de fundo */
-    color: #F5F7F8; /* Cor do texto */
-    padding: 5px 10px; /* Espaçamento interno */
-    border: none; /* Remove a borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de clique */
-    margin-top: 5px; /* Margem superior */
-    display: block; /* Exibe como bloco */
-    text-align: center; /* Centraliza o texto */
-    width: 100%; /* Largura total */
+    background-color: #30475E;
+    color: #F5F7F8;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
-/* Estilo ao passar o mouse nos botões do chat */
-.chat-button:hover {
-    background-color: #425467; /* Muda a cor de fundo */
+.chat-button:hover{
+    background-color: #425467
 }
 
-/* Estilo do botão de ajuda flutuante */
+
+
 .btn {
-    position: absolute; /* Posição absoluta */
-    top: 80%; /* Posição a partir do topo */
-    right: 1%; /* Posição a partir da direita */
+    position: absolute;
+    top: 80%;
+    right: 1%;
     display: flex;
-    align-items: center; /* Alinha os itens no centro */
-    justify-content: flex-end; /* Alinha à direita */
-    padding: 11px 25px; /* Espaçamento interno */
-    background-color: #1b2b3b; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda */
-    cursor: pointer; /* Cursor de clique */
-    font-size: 1.0rem; /* Tamanho da fonte */
-    border-radius: 1.8rem; /* Bordas arredondadas */
-    white-space: nowrap; /* Evita quebra de linha */
-    overflow: hidden; /* Oculta o conteúdo que ultrapassar */
-    transition: width 0.5s ease, background-color 0.5s ease; /* Transição suave */
-    width: 60px; /* Largura inicial */
-    text-align: right; /* Alinha o texto à direita */
+    align-items: center;
+    justify-content: flex-end; 
+    padding: 11px 25px;
+    background-color: #1b2b3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.0rem;
+    border-radius: 1.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    width: 60px;
+    text-align: right;
 }
 
-/* Estilo do botão quando o mouse passa sobre ele ou está ativo */
-.btn:hover,
-.btn.active {
-    width: 370px; /* Largura expandida */
-    background-color: #1b2b3b; /* Mantém a cor de fundo */
+.btn:hover, .btn.active {
+    width: 370px; 
+    background-color: #1b2b3b;
 }
 
-/* Estilo do texto dentro do botão de ajuda */
 .btn .text {
-    opacity: 0; /* Invisível por padrão */
-    transition: opacity 0.5s ease; /* Transição suave */
-    margin-right: 0;
-    white-space: nowrap; /* Impede quebra de linha */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin-right: 0; 
+    white-space: nowrap;
 }
 
-/* Estilo do texto visível quando o botão é expandido */
-.btn:hover .text,
-.btn.active .text {
-    opacity: 1; /* Torna o texto visível */
+.btn:hover .text, .btn.active .text {
+    opacity: 1;
 }
 
-/* Estilo do ponto de interrogação ao lado do texto */
 .interrogacao {
-    margin-left: 10px; /* Margem à esquerda */
+    margin-left: 10px; 
 }
 
-/* Estilo da imagem de fundo */
-.image {
-    position: absolute; /* Posição absoluta */
-    z-index: -1; /* Coloca a imagem no fundo */
-    opacity: 0.05; /* Baixa opacidade */
+
+.image{
+    position: absolute;
+    z-index: -1;
+    opacity: 0.05;
 }
 
-/* Remove o sublinhado dos links */
-.no_grif {
+.no_grif{
     text-decoration: none !important;
 }
 
-/* Estilo do rodapé */
+
+
 footer {
-    background-color: #F5F7F8; /* Cor de fundo */
-    color: #45474B; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    padding: 0; /* Remove o espaçamento */
-    width: 100%; /* Largura total */
-    position: absolute; /* Posição absoluta */
-    bottom: 0; /* Posição no fundo da página */
-    font-size: 1rem; /* Tamanho da fonte */
+    background-color: #F5F7F8;
+    color: #45474B; 
+    text-align: center; 
+    padding: 0; 
+    width: 100%; 
+    position: absolute;
+    bottom: 0; 
+    font-size: 1rem; 
 }
